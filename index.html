@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Play minecraft 1.8 in your browser" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.8, 1.8.8" />
+		<title>FireClient | Home</title>
+		<meta property="og:locale" content="en-US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="DefianceMC" />
+		<meta property="og:description" content="Defy Minecraft" />
+		<meta property="og:image" content="favicon.png" />
+		<link type="image/png" rel="shortcut icon" href="favicon.png" />
+		<script type="text/javascript" src="eaglercraft_opts.js"></script>
+		<script type="text/javascript" src="classes.js"></script>
+		<script type="text/javascript" src="fix-webm-duration.js"></script>
+		<script type="text/javascript">
+			/* function loadEaglerCraft() {
+				if(document.location.href.startsWith("file:")) {
+					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+				}else {
+					var opts = window.eaglercraftXOpts;
+					
+					if(typeof opts === "function") window.eaglercraftXOpts = opts = opts();
+					if(typeof opts === "undefined") window.eaglercraftXOpts = opts = {};
+					
+					if(!opts.container) opts.container = "game_frame";
+					if(!opts.assetsURI) opts.assetsURI = "assets.epk";
+					if(!opts.localesURI) opts.localesURI = "lang/";
+					
+					if(!opts.joinServer)  {
+						var q = window.location.search;
+						if(typeof q === "string" && q.startsWith("?")) {
+							q = new URLSearchParams(q);
+							var s = q.get("server");
+							if(s) opts.joinServer = s;
+						}
+					}
+					
+					main();
+				}
+      } */
+      function loadClient() {
+        document.getElementById("game_frame").innerHTML = "<iframe src=\"https://slidemovies.org/eaglercraft/player/\" style=\"width:100%;height:100%;border:0;border-radius:5px;\" id=\"game_frame_i\"></iframe>";
+        document.getElementById("game_frame_i").onload = function() {
+         setInterval(function() {
